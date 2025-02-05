@@ -1,0 +1,80 @@
+/* Variables */
+
+.o--Reset--scope {
+    --element-padding-h: 18px;
+    --element-padding-v: 12px;
+
+    & > div {
+        --color-bg: #f9f9f9;
+    }
+}
+
+/* General */
+
+.o--Widget--widget {
+
+    &:not(.o--Widget--popup) {
+        border-width: 1px;
+        border-color: var(--color-granite);
+    }
+
+    /* Buttons */
+
+    .o--Button--btn {
+        position: relative;
+        overflow: hidden;
+        transition: all .2s ease-in-out;
+        box-shadow: 
+            0 2px var(--accent-color),
+            0 3px hsl(0 0 0),
+            0 4px hsl(0 0 100),
+            inset 0px 0px 0px 1px hsla(0 0 100 / 25%),
+            inset 0 -10px 10px hsla(0 0 100 / 25%),
+            inset 0 10px 10px hsla(0 0 100 / 25%);
+
+        &:hover {
+            transform: translateY(2px);
+            box-shadow: 
+                0 0px var(--accent-color),
+                0 1px hsl(0 0 0),
+                0 2px hsl(0 0 100),
+                inset 0px 0px 0px 1px hsla(0 0 100 / 25%),
+                inset 0 -10px 10px hsla(0 0 100 / 25%),
+                inset 0 10px 10px hsla(0 0 100 / 25%),
+                inset 0 0 0 0 transparent;
+
+            &::after {
+                bottom: 30%;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            bottom: 40%;
+            left: 12px;
+            right: 12px;
+            background: linear-gradient(hsla(0, 0%, 100%, 1), hsla(0, 0%, 100%, 0) 75%);
+            border-radius: 200px;
+            mix-blend-mode: overlay;
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    /* Inputs */
+
+    .o--Input--fieldStyle-light-border {
+        box-shadow: none;
+        background-color: #fff;
+    }
+
+    .o--Input--input {
+        box-shadow: 
+            inset 0 2px 4px hsl(0 0 0 / 5%),
+            inset 0 4px 8px hsl(0 0 0 / 5%),
+            0 1px #fff;
+    }
+
+
+}
