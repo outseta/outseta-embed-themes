@@ -9,10 +9,11 @@
 
 .o--Widget--widget {
 
+    background-color: #f9f9f9;
+
     &:not(.o--Widget--popup) {
         border-width: 1px;
         border-color: var(--color-granite);
-        background-color: #f9f9f9;
     }
 
     /* Buttons */
