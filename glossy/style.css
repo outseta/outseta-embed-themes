@@ -3,13 +3,15 @@
 .o--Reset--scope {
     --element-padding-h: 18px;
     --element-padding-v: 12px;
+
+    & > div {
+        --color-bg: #f9f9f9;
+    }
 }
 
 /* General */
 
 .o--Widget--widget {
-
-    background-color: #f9f9f9;
 
     &:not(.o--Widget--popup) {
         border-width: 1px;
