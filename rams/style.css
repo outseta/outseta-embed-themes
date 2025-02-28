@@ -1,0 +1,103 @@
+.o--Reset--reset {
+
+    /* Variables */
+
+    &.o--Reset--scope {
+        --weight-bold: normal;
+        --radius-round: 8px;
+        --color-text: #262626;
+
+        & > div {
+            --color-bg: #f7f7f7;
+        }
+        
+    }
+
+    /* General */
+
+    .o--Widget--widget {
+
+        /* Wrapper */
+
+        &.o--Widget--cornerShape-rounded {
+            border-radius: 0;
+        }
+
+        /* Headings */
+
+        h1 {
+            letter-spacing: -0.02em;
+        }
+
+        /* Buttons */
+
+        .o--Button--btn {
+            transition: all .4s ease-in-out !important;
+            will-change: transform;
+            position: relative;
+            box-shadow: 
+                rgba(0, 0, 0, 0.5) 0.5px 0.5px 0.75px -0.6px, 
+                rgba(0, 0, 0, 0.45) 1px 1px 1.5px -1.2px, 
+                rgba(0, 0, 0, 0.4) 2.5px 2.5px 3.75px -1.8px, 
+                rgba(0, 0, 0, 0.35) 5px 5px 7.5px -2.5px, 
+                rgba(0, 0, 0, 0.3) 10px 10px 15px -3.1px, 
+                rgba(0, 0, 0, 0.25) 20px 20px 30px -3.7px,
+                var(--color-text) 0 1px 0 1px;
+            overflow: hidden;
+            border: none !important;
+            filter: saturate(135%);
+
+            &:hover {
+                box-shadow: 
+                rgba(0, 0, 0, 0.5) 0.5px 0.5px 0.75px -0.6px, 
+                rgba(0, 0, 0, 0.45) 1px 1px 1.5px -1.2px, 
+                rgba(0, 0, 0, 0.4) 2.5px 2.5px 3.75px -1.8px, 
+                rgba(0, 0, 0, 0) 5px 5px 7.5px -2.5px, 
+                rgba(0, 0, 0, 0) 10px 10px 15px -3.1px, 
+                rgba(0, 0, 0, 0) 20px 20px 30px -3.7px,
+                var(--color-text) 0 0 0 1px;
+                transform: translateY(1px);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(hsla(0, 0%, 100%, 0.25), hsla(0, 0%, 0%, 0.5));
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 2px;
+                background: linear-gradient(178deg, hsla(0, 0%, 0%, 0.25), hsla(0, 0%, 100%, 0.25)), var(--accent-color);
+                border-radius: calc(var(--radius-round) - 2px);
+                filter: blur(0.5px);
+            }
+
+            .o--Button--children {
+                position: relative;
+                z-index: 999;
+                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        /* Inputs */
+
+        .o--Input--input {
+            &.o--Input--fieldStyle-light-solid {
+                box-shadow: 
+                    rgba(0, 0, 0, 0.25) 1px 1px 2px 0px inset,
+                    rgba(255,255,255, 1) 1px 1px 0 0;
+                border: none;
+
+                &:focus {
+                    outline-width: 2px;
+                    background-color: #fff;
+                }
+            }
+        }
+
+    }
+}
+
